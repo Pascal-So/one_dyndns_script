@@ -1,6 +1,6 @@
 # Hacky DynDNS script for One.com
 
-Perform [DynDNS](DynDNS) updates on A or AAAA records on your [One.com](https://www.one.com) account.
+Perform [DynDNS](https://en.wikipedia.org/wiki/Dynamic_DNS) updates on A or AAAA records on your [One.com](https://www.one.com) account.
 
 One.com doesn't have an API to set the IP of a DNS record. We can still however just send the requests that get sent when you update a record in the One.com control panel.
 
@@ -20,6 +20,6 @@ Add a cron job to run the script every 5 minutes.
 
 ## Caveats
 
-The minimum TTL on One.com is 600 = 10 minutes, so you might face some downtime when your ip changes.
+The minimum TTL on One.com is 600 = 10 minutes, so you might face some downtime when your IP changes.
 
 This script sets the record to your current public IP, this might not be what you want, but it shouldn't be too hard to change in `one_dyndns.sh`
