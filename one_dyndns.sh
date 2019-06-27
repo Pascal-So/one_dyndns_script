@@ -20,6 +20,6 @@ if [[ "$ip" != "$last_ip" ]]; then
     echo $ip > "$last_ip_file"
 
     if [[ -v ip_changes_logfile && "$ip_changes_logfile" != "" ]]; then
-        echo "[$(date --rfc-3339 seconds)] $ip" >> "$logfile"
+        echo "[$(date --rfc-3339 seconds)] $ip" >> "$ip_changes_logfile"
     fi
 fi
